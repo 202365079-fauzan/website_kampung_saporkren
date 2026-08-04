@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="Bird illustration">
+  <defs>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="240" rx="24" fill="url(#g3)"/>
+  <path d="M90 160C90 160 132 108 186 118C240 128 262 162 250 180C238 198 206 198 176 190C146 182 110 164 90 160Z" fill="#0369a1"/>
+  <path d="M130 110C130 110 168 90 202 104C236 118 250 150 248 178" stroke="#075985" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <circle cx="120" cy="120" r="10" fill="#0f172a"/>
+</svg>

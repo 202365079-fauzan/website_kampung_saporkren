@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gravitas+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-sand text-dark antialiased;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image:
+      radial-gradient(circle at top left, rgba(0, 91, 150, 0.14), transparent 30%),
+      radial-gradient(circle at top right, rgba(0, 121, 107, 0.14), transparent 28%),
+      linear-gradient(180deg, #ffffff 0%, #f4ebd0 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(31, 41, 55, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(31, 41, 55, 0.03) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), transparent 78%);
+    opacity: 0.75;
+  }
+
+  #root {
+    min-height: 100vh;
+    isolation: isolate;
+  }
+
+  ::selection {
+    background: #d4af37;
+    color: #1f2937;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  img {
+    @apply select-none;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-gold ring-offset-2 ring-offset-sand;
+  }
+}
+
+@layer utilities {
+  .app-shell {
+    @apply overflow-x-hidden;
+  }
+
+  .layout-backdrop {
+    @apply pointer-events-none fixed inset-0 z-0 overflow-hidden;
+  }
+
+  .layout-backdrop::before,
+  .layout-backdrop::after {
+    content: '';
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(16px);
+    opacity: 0.55;
+  }
+
+  .layout-backdrop::before {
+    width: 22rem;
+    height: 22rem;
+    top: -8rem;
+    left: -6rem;
+    background: radial-gradient(circle, rgba(0, 91, 150, 0.16), transparent 70%);
+  }
+
+  .layout-backdrop::after {
+    width: 24rem;
+    height: 24rem;
+    right: -8rem;
+    bottom: -10rem;
+    background: radial-gradient(circle, rgba(0, 121, 107, 0.14), transparent 72%);
+  }
+
+  .skip-link {
+    @apply absolute left-4 top-4 z-50 -translate-y-16 rounded-full bg-dark px-5 py-3 text-sm font-semibold text-white shadow-tropical transition duration-200 focus-visible:translate-y-0;
+  }
+
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-spacing,
+  .page-section {
+    @apply py-6 sm:py-10 lg:py-12;
+  }
+
+  .section-spacing-sm {
+    @apply pt-4 sm:pt-6 lg:pt-8;
+  }
+
+  .section-spacing-lg {
+    @apply py-10 sm:py-12 lg:py-16;
+  }
+
+  .surface-card {
+    @apply rounded-[2rem] border border-white/60 bg-white/80 shadow-tropical backdrop-blur-sm shadow-2xl;
+  }
+
+  .section-badge {
+    @apply inline-flex items-center rounded-full border border-ocean/15 bg-ocean/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-ocean;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold tracking-tight text-dark sm:text-4xl lg:text-5xl;
+    font-family: 'Galada', serif;
+  }
+
+  .section-copy {
+    @apply max-w-2xl text-base leading-7 text-dark/75 sm:text-lg;
+  }
+}
+   /* Apply Galada font to h2 and h3 with large font sizes */
+   h2[class*="text-2xl"],
+   h2[class*="text-3xl"],
+   h2[class*="text-4xl"],
+   h3[class*="text-2xl"],
+   h3[class*="text-3xl"],
+   h3[class*="text-4xl"] {
+     font-family: 'Galada', serif;
+   }
