@@ -13,7 +13,7 @@ $birdingWarnings = config('saporkren.birdingWarnings');
         <div class="container page-hero-inner">
             <!-- Header section -->
             <div class="page-header">
-                <span class="hero-badge">Bird Watching & Ekowisata</span>
+                <span class="hero-badge">Bird Watching</span>
                 <h1 class="hero-title subpage-title">
                     Pengamatan Burung Endemik Papua di Kampung Saporkren
                 </h1>
@@ -130,7 +130,7 @@ $birdingWarnings = config('saporkren.birdingWarnings');
                 <div class="card card-padded-lg" style="margin-bottom: 3rem;">
                     <div class="section-header">
                         <span class="hero-badge">Keunggulan Lokasi</span>
-                        <h2 class="section-title section-title-sm">Alasan Birding di Kampung Saporkren</h2>
+                        <h2 class="section-title section-title-sm">Alasan Pengamatan Burung di Kampung Saporkren</h2>
                     </div>
 
                     <div class="grid grid-cols-3" style="gap: 1.5rem;">
@@ -163,7 +163,7 @@ $birdingWarnings = config('saporkren.birdingWarnings');
                 <div class="card card-padded-lg" style=" border-left: 5px solid #eab308;">
                     <div style="margin-bottom: 1.5rem;">
                         <span class="hero-badge" style="background: #fef08a; color: #854d0e;">Etika & Keselamatan Hutan</span>
-                        <h2 class="section-title section-title-sm">Etika dan Peringatan Selama Birding</h2>
+                        <h2 class="section-title section-title-sm">Etika dan Peringatan Selama Pengamatan</h2>
                         <p class="section-desc" style="color: var(--color-gray-600);">Demi menjaga kelestarian satwa langka dan kenyamanan bersama, wisatawan diwajibkan mematuhi panduan berikut:</p>
                     </div>
 

@@ -20,24 +20,35 @@ class UmkmProductsTable
                     ->label('Nama Produk')
                     ->searchable()
                     ->sortable(),
+                
                 TextColumn::make('category')
                     ->label('Kategori')
                     ->searchable()
-                    ->sortable(),
+                    ->sortable()
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'Kerajinan Tangan', 'Kerajinan' => 'warning',
+                        'Makanan Olahan', 'Olahan Makanan', 'Makanan' => 'success',
+                        default => 'info',
+                    }),
                 TextColumn::make('price')
                     ->label('Harga')
+                    ->money('IDR', decimalPlaces: 0, locale: 'id_ID')
                     ->searchable(),
                 TextColumn::make('maker')
                     ->label('Produsen / Perajin')
                     ->searchable(),
                 ImageColumn::make('image')
-                    ->label('Foto Produk')
+                    ->label('Foto')
                     ->getStateUsing(function ($record) {
                         if (!$record->image) return null;
-                        if (str_starts_with($record->image, 'img/')) {
+                        if (str_starts_with($record->image, 'http://') || str_starts_with($record->image, 'https://')) {
+                            return $record->image;
+                        }
+                        if (str_starts_with($record->image, 'assets/') || str_starts_with($record->image, 'img/')) {
                             return asset($record->image);
                         }
-                        return $record->image;
+                        return asset('storage/' . $record->image);
                     }),
                 TextColumn::make('created_at')
                     ->dateTime()

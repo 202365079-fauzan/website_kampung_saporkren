@@ -1,0 +1,612 @@
+{
+    "homestays": [
+        {
+            "id": 1,
+            "name": "Homestay Mambefor",
+            "owner": "Pak Thedoris Dimara",
+            "short_description": null,
+            "facilities": "Lemari, Kipas Angin, Meja, Cermin, Kelambu",
+            "price": 450000,
+            "image": "homestays\/01KZ7W1KWK2BEQF6D7056V5NT9.jpg",
+            "maps_link": "https:\/\/maps.app.goo.gl\/YL7S8KianDVkGTP18",
+            "capacity": "2-4 Orang"
+        },
+        {
+            "id": 2,
+            "name": "Homestay Dolfin",
+            "owner": "Pak Maklon Sauyai",
+            "short_description": null,
+            "facilities": "Meja, Kelambu, Cermin",
+            "price": 450000,
+            "image": "homestays\/01KZAKX24BT08G2E633TCFDQT9.jpg",
+            "maps_link": "https:\/\/goo.gl\/maps\/VSe6JfMSVNeesxNT8?g_st=aw",
+            "capacity": "2-3 Orang"
+        },
+        {
+            "id": 3,
+            "name": "Homestay Yonatan Dimara",
+            "owner": "Yonatan Dimara",
+            "short_description": null,
+            "facilities": "Lemari, Meja, Kursi, Kelambu",
+            "price": 350000,
+            "image": "homestays\/01KZAM0QD77MMMV9YXVSMVKBAG.jpg",
+            "maps_link": "https:\/\/maps.app.goo.gl\/J2qWDtpD1HdWQS2S6",
+            "capacity": "2-4 Orang"
+        },
+        {
+            "id": 4,
+            "name": "Homestay Hosea",
+            "owner": "Pak Maklon Sauyai",
+            "short_description": null,
+            "facilities": "Meja, Kelambu, Cermin",
+            "price": 450000,
+            "image": "homestays\/01KZAM1J3DGV7P05M80VE6ESAR.jpg",
+            "maps_link": "https:\/\/goo.gl\/maps\/97TnmpMUtCV7Y64v9?g_st=aw",
+            "capacity": "2-3 Orang"
+        },
+        {
+            "id": 5,
+            "name": "Homestay Mankombon 01",
+            "owner": "Pak Yopi Dimara",
+            "short_description": null,
+            "facilities": "Meja, Kursi, Kelambu, Lemari, Cermin",
+            "price": 450000,
+            "image": "homestays\/01KZAM2QPDV09FQ0C9ERERB33Y.jpg",
+            "maps_link": "https:\/\/goo.gl\/maps\/Xi7yHkPmXU35p9Zt9?g_st=aw",
+            "capacity": "2-4 Orang"
+        },
+        {
+            "id": 6,
+            "name": "Homestay Mankombon 02",
+            "owner": "Ibu Maria Dimara",
+            "short_description": null,
+            "facilities": "Kursi, Lemari, Kelambu",
+            "price": 450000,
+            "image": "homestays\/01KZAM3H3TYNKB8TB3M92C3Z2B.jpg",
+            "maps_link": "https:\/\/goo.gl\/maps\/L6otKv1aKqL7RF1eA?g_st=aw",
+            "capacity": "2 Orang"
+        },
+        {
+            "id": 7,
+            "name": "Homestay Insarek",
+            "owner": "Pak Hermek Mofu",
+            "short_description": null,
+            "facilities": "Meja, Kursi, Lemari, Kipas Angin",
+            "price": 450000,
+            "image": "homestays\/01KZAM4BMH666W1HY5S1KT6E58.jpg",
+            "maps_link": "https:\/\/goo.gl\/maps\/BJUkyD3DTEtd5ntG6?g_st=aw",
+            "capacity": "2-3 Orang"
+        },
+        {
+            "id": 8,
+            "name": "Homestay Myos Mkun Mawar",
+            "owner": "Ibu Koresina Mambrasar",
+            "short_description": null,
+            "facilities": "Meja, Kursi, Lemari, Kelambu",
+            "price": 450000,
+            "image": "homestays\/01KZAM58VEDQ2SRQ3G5S0TVT3Z.jpg",
+            "maps_link": "https:\/\/goo.gl\/maps\/3rFmHcD3fHAwbqNy9?g_st=aw",
+            "capacity": "2-4 Orang"
+        },
+        {
+            "id": 9,
+            "name": "Homestay Myos Mkun",
+            "owner": "Ibu Anike Mambrasar",
+            "short_description": null,
+            "facilities": "Meja, Kipas Angin, Kelambu",
+            "price": 470000,
+            "image": "homestays\/01KZAM8JT419EHMS8RXAB45ZA0.jpg",
+            "maps_link": "https:\/\/goo.gl\/maps\/RmwGg6XCCiGqX3CG6?g_st=aw",
+            "capacity": "2-3 Orang"
+        },
+        {
+            "id": 10,
+            "name": "Homestay Lumba-lumba",
+            "owner": "Pak Abner Mambrasar",
+            "short_description": null,
+            "facilities": "Lemari, Kipas Angin, Meja, Kelambu",
+            "price": 450000,
+            "image": "homestays\/01KZAMD80FYZ2KZS4C0G82FKJF.jpg",
+            "maps_link": "https:\/\/goo.gl\/maps\/97pFkUwPcfbWABm2A?g_st=aw",
+            "capacity": "4 Orang"
+        },
+        {
+            "id": 11,
+            "name": "Homestay Yenuwer Yen",
+            "owner": "Pak Yopi Dimara",
+            "short_description": null,
+            "facilities": "Meja, Kursi, Kipas Angin, Kelambu",
+            "price": 600000,
+            "image": "homestays\/01KZ7VJ4D63XZSYQ014MAHYFMS.JPG",
+            "maps_link": "https:\/\/www.google.com\/maps",
+            "capacity": "3 Orang"
+        },
+        {
+            "id": 12,
+            "name": "Homestay Mambruk",
+            "owner": "Pak Luther Teluk Wabiai",
+            "short_description": null,
+            "facilities": "Meja, Kursi, Kelambu, Kipas Angin, Lemari",
+            "price": 500000,
+            "image": "homestays\/01KZAMECNX80KR6WJXNBYQX9R4.jpg",
+            "maps_link": "https:\/\/goo.gl\/maps\/3rFmHcD3fHAwbqNy9?g_st=aw",
+            "capacity": "2-3 Orang"
+        },
+        {
+            "id": 13,
+            "name": "Homestay Saporkren",
+            "owner": "Pak Franky Mambrasar",
+            "short_description": null,
+            "facilities": "Meja, Kursi, Kelambu, Kipas Angin, Lemari",
+            "price": 500000,
+            "image": "homestays\/01KZAMFBQCQA40S4422CPMWX93.jpg",
+            "maps_link": "https:\/\/goo.gl\/maps\/3rFmHcD3fHAwbqNy9?g_st=aw",
+            "capacity": "2-4 Orang"
+        },
+        {
+            "id": 14,
+            "name": "Homestay Yenkankanes",
+            "owner": "Margareta Morin",
+            "short_description": null,
+            "facilities": "Meja, Kursi, Kelambu, Kipas Angin",
+            "price": 500000,
+            "image": "homestays\/01KZAMM6MXPPYQ7QES62GGRK7F.jpg",
+            "maps_link": "https:\/\/goo.gl\/maps\/3rFmHcD3fHAwbqNy9?g_st=aw",
+            "capacity": "2 Orang"
+        },
+        {
+            "id": 15,
+            "name": "Homestay Wapnansan",
+            "owner": "Pak Franky Mambrasar",
+            "short_description": null,
+            "facilities": null,
+            "price": 450000,
+            "image": "homestays\/01KZANADKFPY5WKCPWK3SQ40K1.jpg",
+            "maps_link": "https:\/\/maps.app.goo.gl\/N4jirfx7VP8QizCf9",
+            "capacity": "2-4 Orang"
+        }
+    ],
+    "tourGuides": [
+        {
+            "id": 1,
+            "name": "Marthen Berotabui",
+            "specialty": "Island Hopping, Bird Watching, Snorkeling, Kayak",
+            "languages": "Bahasa Indonesia, English",
+            "experience": "10+ Tahun",
+            "transport": "Perahu Motor & Transport Darat",
+            "image": null,
+            "description": "Pemandu senior yang sangat berpengalaman memandu wisatawan menjelajahi spot ikonik Raja Ampat dengan keamanan utama."
+        },
+        {
+            "id": 2,
+            "name": "Benny Mambrasar",
+            "specialty": "Bird Watching, Island Hopping, Kayak",
+            "languages": "Bahasa Indonesia, English",
+            "experience": "10+ Tahun",
+            "transport": "Perahu Motor",
+            "image": null,
+            "description": "Spesialis pengamatan burung endemik Papua dan pemandu jelajah pulau dengan pengetahuan lokal yang mendalam."
+        },
+        {
+            "id": 3,
+            "name": "Abraham Latuperisa",
+            "specialty": "Bird Watching",
+            "languages": "Bahasa Indonesia, English",
+            "experience": "10+ Tahun",
+            "transport": "Mobil & Perahu Motor",
+            "image": null,
+            "description": "Fokus pada pengalaman personal petualangan alam hutan Waigeo dan pengamatan satwa langka."
+        },
+        {
+            "id": 4,
+            "name": "Yopi Dimara",
+            "specialty": " Trip",
+            "languages": "Bahasa Indonesia, English",
+            "experience": "6+ Tahun",
+            "transport": "Mobil & Perahu Motor",
+            "image": null,
+            "description": "Mengajak wisatawan mengenal sejarah, tradisi adat, dan kearifan lokal masyarakat Kampung Saporkren."
+        },
+        {
+            "id": 5,
+            "name": "Melkias Mambrasar",
+            "specialty": "Wisata Budaya & Tracking",
+            "languages": "Bahasa Indonesia, English",
+            "experience": "6+ Tahun",
+            "transport": "Mobil & Perahu Motor",
+            "image": null,
+            "description": "Memahami rute-rute terbaik jelajah alam darat dan tradisi lokal Papua."
+        },
+        {
+            "id": 6,
+            "name": "Amros Dimara",
+            "specialty": "Snorkeling ",
+            "languages": "Bahasa Indonesia",
+            "experience": "7+ Tahun",
+            "transport": "Perahu",
+            "image": null,
+            "description": "Ahli navigasi titik-titik snorkeling terbaik dan konservasi biota laut sekitar Saporkren."
+        }
+    ],
+    "birdSpecies": [
+        {
+            "id": 1,
+            "local_name": "Cenderawasih Merah",
+            "latin_name": "Paradisaea rubra",
+            "habitat": "Tajuk Hutan Primer Waigeo",
+            "best_time": "05.30 - 08.30 WIT (Pagi)",
+            "conservation_status": "Hampir Terancam (Endemik)",
+            "description": "Burung surga ikonik khas Pulau Waigeo dengan bulu hias merah menyala dan tarian kawin yang memukau di atas pepohonan tinggi.",
+            "image": "assets\/bird\/Cendrawasih.jpeg"
+        },
+        {
+            "id": 2,
+            "local_name": "Cenderawasih Botak (Wilson’s)",
+            "latin_name": "Cicinnurus respublica",
+            "habitat": "Lantai & Semak Hutan Hujan Tropis",
+            "best_time": "06.00 - 09.00 WIT (Pagi)",
+            "conservation_status": "Hampir Terancam (Endemik)",
+            "description": "Salah satu burung terindah di dunia dengan mahkota biru terang tanpa bulu, warna bulu kontras, dan ritual membersihkan arena tarian.",
+            "image": "assets\/bird\/Wilson.jpeg"
+        },
+        {
+            "id": 3,
+            "local_name": "Pitohui Raja Ampat",
+            "latin_name": "Pitohui cerviniventris",
+            "habitat": "Hutan Tropis Dataran Rendah",
+            "best_time": "06.00 - 10.00 WIT",
+            "conservation_status": "Resiko Rendah (Endemik)",
+            "description": "Burung unik endemik dengan keistimewaan racun alami (batrachotoxin) pada kulit dan bulunya sebagai perlindungan diri di alam bebas.",
+            "image": "assets\/bird\/pitohui raja ampat.jpg"
+        }
+    ],
+    "umkmProducts": [
+        {
+            "id": 1,
+            "name": "Kapowen mangkuap",
+            "category": "Kerajinan Tangan",
+            "price": 75000,
+            "maker": "Papua arts",
+            "description": null,
+            "image": "umkm-products\/01KZAPMENWVTT5XXSSV74J323V.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Kapowen Kewrai",
+            "category": "Kerajinan Tangan",
+            "price": 350000,
+            "maker": "Papua arts",
+            "description": null,
+            "image": "umkm-products\/01KZBAV5FX43BMPY5Y5ESBJY5X.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Kapowen mangkuap",
+            "category": "Kerajinan Tangan",
+            "price": 200000,
+            "maker": "Papua arts",
+            "description": null,
+            "image": "umkm-products\/01KZBAZFDBB7C0AAQBGJ5YMRY2.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Kapowen mangkuap",
+            "category": "Kerajinan Tangan",
+            "price": 100000,
+            "maker": "Papua arts",
+            "description": null,
+            "image": "umkm-products\/01KZBB1VMF86MBB9W7SFGJNF0Y.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Kapowen mangkuap",
+            "category": "Kerajinan Tangan",
+            "price": 150000,
+            "maker": "Papua arts",
+            "description": "Dilapisi 2 lapisan yaitu : lapisan dalam menggunakan daun tikar dan lapisan luar menggunakan daun sikar",
+            "image": "umkm-products\/01KZBB5EVCJMNXC0C77FBEMZV4.jpg"
+        },
+        {
+            "id": 9,
+            "name": "Kapowen Tater",
+            "category": "Kerajinan Tangan",
+            "price": 200000,
+            "maker": "Papua arts",
+            "description": null,
+            "image": "umkm-products\/01KZBB7N4883P64RRYS2QAEMTG.jpg"
+        },
+        {
+            "id": 10,
+            "name": "bayai",
+            "category": "Kerajinan Tangan",
+            "price": 25000,
+            "maker": "Papua arts",
+            "description": null,
+            "image": "umkm-products\/01KZBBBY0NSC2QC9HRE8J2C4SC.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Bayai ",
+            "category": "Kerajinan Tangan",
+            "price": 100000,
+            "maker": "Papua arts",
+            "description": null,
+            "image": "umkm-products\/01KZBBB4EATRRX9N3C2KEKH02X.jpg"
+        },
+        {
+            "id": 12,
+            "name": "Gelang Backen",
+            "category": "Kerajinan Tangan",
+            "price": 25000,
+            "maker": "Rosita Mambrasar",
+            "description": null,
+            "image": "umkm-products\/01KZBBHE4TAT6R4VABN31V75S1.jpg"
+        },
+        {
+            "id": 13,
+            "name": "Sisir Bambu",
+            "category": "Kerajinan Tangan",
+            "price": 25000,
+            "maker": "Rosita Mambrasar",
+            "description": null,
+            "image": "umkm-products\/01KZBBWYFKAD3GMP1DADE2KMH2.jpg"
+        },
+        {
+            "id": 14,
+            "name": "Sisir Backen",
+            "category": "Kerajinan Tangan",
+            "price": 30000,
+            "maker": "Rosita Mambrasar",
+            "description": null,
+            "image": "umkm-products\/01KZBBXY6RR53X9PBD08H6YK9M.jpg"
+        },
+        {
+            "id": 15,
+            "name": "tempat Tisu Backen",
+            "category": "Kerajinan Tangan",
+            "price": 200000,
+            "maker": "Rosita Mambrasar",
+            "description": null,
+            "image": "umkm-products\/01KZBC1BQFHCMC31B99MF3Y3CM.jpg"
+        },
+        {
+            "id": 16,
+            "name": "Kalung Backen",
+            "category": "Kerajinan Tangan",
+            "price": 150000,
+            "maker": "Rosita Mambrasar",
+            "description": null,
+            "image": "umkm-products\/01KZBCHXEMV2WS7QYA974ZZ2XZ.jpg"
+        },
+        {
+            "id": 17,
+            "name": "Kalung Kerang",
+            "category": "Kerajinan Tangan",
+            "price": 25000,
+            "maker": "Rosita Mambrasar",
+            "description": null,
+            "image": "umkm-products\/01KZBCH1FVHFCGSS5RV77BTYM2.jpg"
+        }
+    ],
+    "tourPackages": [
+        {
+            "id": 1,
+            "name": "One Day Trip",
+            "type": "island_hopping",
+            "duration": "1 hari",
+            "price": 2000000,
+            "price_speedboat": 3500000,
+            "includes": {
+                "islands": [
+                    "Arborek",
+                    "Friwen Well",
+                    "Batu Lima",
+                    "Mioskun"
+                ],
+                "items": [
+                    "1 – 4 orang",
+                    "Makan siang",
+                    "Peralatan snorkeling"
+                ]
+            }
+        },
+        {
+            "id": 12,
+            "name": "Friwen Well",
+            "type": "snorkeling_trip",
+            "duration": "1 Hari",
+            "price": 250000,
+            "includes": {
+                "info": "1 - 4 orang"
+            }
+        },
+        {
+            "id": 13,
+            "name": "Batu Lima",
+            "type": "snorkeling_trip",
+            "duration": "1 Hari",
+            "price": 300000,
+            "includes": {
+                "info": "1 - 4 orang"
+            }
+        },
+        {
+            "id": 14,
+            "name": "Sawandarek Jetty",
+            "type": "snorkeling_trip",
+            "duration": "1 Hari",
+            "price": 1000000,
+            "includes": {
+                "info": "1 - 4 orang"
+            }
+        },
+        {
+            "id": 15,
+            "name": "Pasir Timbul Sandbank",
+            "type": "snorkeling_trip",
+            "duration": "1 Hari",
+            "price": 600000,
+            "includes": {
+                "info": "1 - 4 orang"
+            }
+        },
+        {
+            "id": 16,
+            "name": "Arborek",
+            "type": "snorkeling_trip",
+            "duration": "1 Hari",
+            "price": 1500000,
+            "includes": {
+                "info": "1 - 4 orang"
+            }
+        },
+        {
+            "id": 17,
+            "name": "Kabui Wall",
+            "type": "snorkeling_trip",
+            "duration": "1 Hari",
+            "price": 1500000,
+            "includes": {
+                "info": "1 - 4 orang"
+            }
+        },
+        {
+            "id": 18,
+            "name": "Pianemo",
+            "type": "snorkeling_trip",
+            "duration": "1 Hari",
+            "price": 4000000,
+            "includes": {
+                "info": "1 - 4 orang"
+            }
+        },
+        {
+            "id": 19,
+            "name": "Yenbuba Jetty",
+            "type": "snorkeling_trip",
+            "duration": "1 Hari",
+            "price": 700000,
+            "includes": {
+                "info": "1 - 4 orang"
+            }
+        },
+        {
+            "id": 20,
+            "name": "Mioskun",
+            "type": "snorkeling_trip",
+            "duration": "1 Hari",
+            "price": 400000,
+            "includes": {
+                "info": "1 - 4 orang"
+            }
+        },
+        {
+            "id": 21,
+            "name": "Kali Biru (Blue River) Trip in Warsambin",
+            "type": "snorkeling_trip",
+            "duration": "1 Hari",
+            "price": 2500000,
+            "includes": {
+                "info": "1 - 4 orang"
+            }
+        },
+        {
+            "id": 22,
+            "name": "Spotting Cendrawasih Merah",
+            "type": "bird_watching",
+            "duration": "06:00 -09:00 WIT ",
+            "price": 300000,
+            "includes": [
+                "Makan Siang & Snack",
+                "Air Mineral"
+            ]
+        },
+        {
+            "id": 23,
+            "name": "Spotting Cendrawasih Botak",
+            "type": "bird_watching",
+            "duration": "06:00 -09:00 WIT ",
+            "price": 300000,
+            "includes": [
+                "Makan Siang & Snack",
+                "Air Mineral"
+            ]
+        },
+        {
+            "id": 24,
+            "name": "Camping Tour",
+            "type": "island_hopping",
+            "duration": "3 hari",
+            "price": 12000000,
+            "price_speedboat": 16000000,
+            "includes": {
+                "islands": [
+                    "Yefnabi",
+                    "Piaynemo",
+                    "Mioskun"
+                ],
+                "items": [
+                    "Tenda",
+                    "boat",
+                    "makanan",
+                    "air",
+                    "alat snorkeling"
+                ]
+            }
+        },
+        {
+            "id": 25,
+            "name": "One Day Trip",
+            "type": "island_hopping",
+            "duration": null,
+            "price": 5000000,
+            "price_speedboat": 7500000,
+            "includes": {
+                "islands": [
+                    "Piaynemo",
+                    "Telaga Bintang",
+                    "Sawandarek",
+                    "Pasir Timbul",
+                    "Friwen Pantai"
+                ],
+                "items": [
+                    "speetboat",
+                    "alat snorkeling",
+                    "life jacket",
+                    "makan siang",
+                    "1-8 orang"
+                ]
+            }
+        },
+        {
+            "id": 26,
+            "name": "One Day Trip Wayag",
+            "type": "island_hopping",
+            "duration": "1 hari",
+            "price": 9000000,
+            "price_speedboat": 12000000,
+            "includes": {
+                "islands": [
+                    "Wayag",
+                    "Shark point"
+                ],
+                "items": [
+                    "speetboat",
+                    "makan siang",
+                    "alat snorkeling",
+                    "sarung tangan",
+                    "1-6 orang"
+                ]
+            }
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "name": "Admin Saporkren",
+            "email": "admin@saporkren.com",
+            "email_verified_at": null,
+            "username": "kampung_saporkren"
+        }
+    ]
+}

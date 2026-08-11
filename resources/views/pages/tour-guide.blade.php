@@ -116,30 +116,18 @@ $meta = config('saporkren.siteMeta');
             <section class="py-8">
                 <div class="card" style="padding: 2.5rem;">
                     
-                    <!-- 3a. Paket Tour ke 5 Pulau (1 day - 6 day) -->
+                    <!-- 3a. Paket Island Hopping (1 day - 6 day) -->
                     <div class="section-header">
                         <span class="hero-badge">Pilihan Paket</span>
-                        <h2 class="section-title section-title-sm">Paket Tour ke 5 Pulau </h2>
-                        <p class="section-desc">Pilihan fleksibel perjalanan eksklusif mengelilingi 5 pulau eksotis di Raja Ampat.</p>
+                        <h2 class="section-title section-title-sm">Paket Island Hopping</h2>
+                        <p class="section-desc">Pilihan fleksibel perjalanan eksklusif jelajah pulau-pulau eksotis di Raja Ampat.</p>
                     </div>
 
                     <div class="grid grid-cols-3" style="gap: 1.75rem;">
                         @foreach ($cardPackages as $pack)
                             @php
-                                $islands = [];
-                                $items = [];
-                                if (is_array($pack->includes)) {
-                                    if (isset($pack->includes['islands'])) {
-                                        $islands = $pack->includes['islands'];
-                                        $items = $pack->includes['items'] ?? [];
-                                    } else {
-                                        $islands = ['Arborek', 'Friwen Well', 'Batu Lima', 'Mioskun', 'Kali Biru (Blue River) / Warsambin'];
-                                        $items = $pack->includes;
-                                    }
-                                } else {
-                                    $islands = ['Arborek', 'Friwen Well', 'Batu Lima', 'Mioskun', 'Kali Biru (Blue River) / Warsambin'];
-                                    $items = ['1 – 4 orang', 'Makan siang', 'Peralatan snorkeling'];
-                                }
+                                $islands = is_array($pack->includes) ? ($pack->includes['islands'] ?? []) : [];
+                                $items = is_array($pack->includes) ? ($pack->includes['items'] ?? []) : [];
                             @endphp
 
                             <article style="background: var(--color-gray-50); border-radius: 1.75rem; padding: 2rem; display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
@@ -147,33 +135,64 @@ $meta = config('saporkren.siteMeta');
                                     {{ $pack->name }}
                                 </h3>
                                 
-                                <p style="font-size: 1.35rem; font-weight: 700; color: var(--color-ocean); margin-top: 0.5rem; margin-bottom: 0.5rem;">
-                                    Rp {{ number_format($pack->price, 0, ',', '.') }}
-                                </p>
+                                @if(!empty($pack->duration))
+                                    <div style="margin-top: 0.4rem;">
+                                        <span style="font-size: 0.8rem; font-weight: 600; color: #ffffffff; background: #e0f2fe; padding: 0.25rem 0.65rem; border-radius: 0.5rem; display: inline-flex; align-items: center; gap: 0.3rem;">
+                                            <span>Durasi: {{ $pack->duration }}</span>
+                                        </span>
+                                    </div>
+                                @endif
                                 
-                                <div style="margin-top: 1.25rem;">
-                                    <p style="font-size: 0.95rem; font-weight: 600; color: #334155; margin-bottom: 0.6rem;">Pulau :</p>
-                                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: #475569;">
-                                        @foreach ($islands as $isl)
-                                            <li style="display: flex; align-items: flex-start; gap: 0.6rem;">
-                                                <span style="margin-top: 0.45rem; height: 0.5rem; width: 0.5rem; border-radius: 9999px; background-color: #ca8a04; flex-shrink: 0;"></span>
-                                                <span>{{ $isl }}</span>
-                                            </li>
-                                        @endforeach
-                                    </ul>
+                                <div style="margin-top: 1rem; margin-bottom: 0.5rem; background: white; padding: 0.85rem 1rem; border-radius: 1rem; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                                        <span style="font-size: 1.15rem; font-weight: 700; color: var(--color-ocean);">
+                                            Rp {{ number_format($pack->price, 0, ',', '.') }}
+                                        </span>
+                                        <span style="font-size: 0.85rem; font-weight: 600; color: #64748b; display: flex; align-items: center; gap: 0.35rem;">
+                                            <span>Longboat</span>
+                                        </span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px dashed #e2e8f0; padding-top: 0.4rem;">
+                                        <span style="font-size: 1.15rem; font-weight: 700; color: #0284c7;">
+                                            @if($pack->price_speedboat)
+                                                Rp {{ number_format($pack->price_speedboat, 0, ',', '.') }}
+                                            @else
+                                                Hubungi Kami
+                                            @endif
+                                        </span>
+                                        <span style="font-size: 0.85rem; font-weight: 600; color: #64748b; display: flex; align-items: center; gap: 0.35rem;">
+                                            <span>Speedboat</span>
+                                        </span>
+                                    </div>
                                 </div>
+                                
+                                @if(!empty($islands))
+                                    <div style="margin-top: 1.25rem;">
+                                        <p style="font-size: 0.95rem; font-weight: 600; color: #334155; margin-bottom: 0.6rem;">Pulau :</p>
+                                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: #475569;">
+                                            @foreach ($islands as $isl)
+                                                <li style="display: flex; align-items: flex-start; gap: 0.6rem;">
+                                                    <span style="margin-top: 0.45rem; height: 0.5rem; width: 0.5rem; border-radius: 9999px; background-color: #ca8a04; flex-shrink: 0;"></span>
+                                                    <span>{{ $isl }}</span>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
 
-                                <div style="margin-top: 1.25rem;">
-                                    <p style="font-size: 0.95rem; font-weight: 600; color: #334155; margin-bottom: 0.6rem;">Includes :</p>
-                                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: #475569;">
-                                        @foreach ($items as $item)
-                                            <li style="display: flex; align-items: flex-start; gap: 0.6rem;">
-                                                <span style="margin-top: 0.45rem; height: 0.5rem; width: 0.5rem; border-radius: 9999px; background-color: #ca8a04; flex-shrink: 0;"></span>
-                                                <span>{{ $item }}</span>
-                                            </li>
-                                        @endforeach
-                                    </ul>
-                                </div>
+                                @if(!empty($items))
+                                    <div style="margin-top: 1.25rem;">
+                                        <p style="font-size: 0.95rem; font-weight: 600; color: #334155; margin-bottom: 0.6rem;">Includes :</p>
+                                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: #475569;">
+                                            @foreach ($items as $item)
+                                                <li style="display: flex; align-items: flex-start; gap: 0.6rem;">
+                                                    <span style="margin-top: 0.45rem; height: 0.5rem; width: 0.5rem; border-radius: 9999px; background-color: #ca8a04; flex-shrink: 0;"></span>
+                                                    <span>{{ $item }}</span>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
                             </article>
                         @endforeach
                     </div>
@@ -185,46 +204,10 @@ $meta = config('saporkren.siteMeta');
                         </a>
                     </div>
 
-                    <!-- 3b. Paket Trip ke Pulau (Tabel) -->
-                    <div style="margin-bottom: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-gray-200);">
-                        <h2 class="section-title section-title-sm">Paket Trip ke Pulau</h2>
-                        <p class="section-desc">Rute perjalanan populer menuju destinasi pulau ikonik di Raja Ampat.</p>
-                    </div>
 
-                    <div style="overflow-x: auto; margin-bottom: 3.5rem; border: 1px solid var(--color-gray-200); border-radius: 1rem;">
-                        <table style="width: 100%; border-collapse: collapse; background: white;">
-                            <thead style="background: #facc15;">
-                                <tr>
-                                    <th style="padding: 1rem; text-align: left; font-size: 0.875rem; font-weight: 700; color: var(--color-dark); border-right: 1px solid #e2e8f0;">No</th>
-                                    <th style="padding: 1rem; text-align: left; font-size: 0.875rem; font-weight: 700; color: var(--color-dark); border-right: 1px solid #e2e8f0;">Destinasi</th>
-                                    <th style="padding: 1rem; text-align: left; font-size: 0.875rem; font-weight: 700; color: var(--color-dark); border-right: 1px solid #e2e8f0;">Durasi</th>
-                                    <th style="padding: 1rem; text-align: left; font-size: 0.875rem; font-weight: 700; color: var(--color-dark); border-right: 1px solid #e2e8f0;">Harga</th>
-                                    <th style="padding: 1rem; text-align: left; font-size: 0.875rem; font-weight: 700; color: var(--color-dark); border-right: 1px solid #e2e8f0;">Fasilitas & Informasi</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($tripPackages as $idx => $pack)
-                                    <tr style="border-top: 1px solid var(--color-gray-200);">
-                                        <td style="padding: 1rem; font-size: 0.875rem; color: var(--color-gray-600);">{{ $idx + 1 }}</td>
-                                        <td style="padding: 1rem; font-size: 0.95rem; font-weight: 700; color: var(--color-dark);">{{ $pack->name }}</td>
-                                        <td style="padding: 1rem; font-size: 0.875rem; color: var(--color-gray-600);">{{ $pack->duration }}</td>
-                                        <td style="padding: 1rem; font-size: 0.95rem; font-weight: 700; color: var(--color-ocean);">Rp {{ number_format($pack->price, 0, ',', '.') }}</td>
-                                        <td style="padding: 1rem; font-size: 0.875rem; color: var(--color-gray-600);">
-                                            @if(is_array($pack->includes))
-                                                {{ implode(', ', $pack->includes) }}
-                                            @else
-                                                {{ $pack->includes }}
-                                            @endif
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- 3c. Paket Trip Snorkeling ke Pulau -->
+                    <!-- 3c. Paket Snorkeling Trip ke Pulau -->
                     <div style="margin-bottom: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-gray-200);">
-                        <h2 class="section-title section-title-sm">Paket Trip Snorkeling ke Pulau</h2>
+                        <h2 class="section-title section-title-sm">Paket Snorkeling Trip ke Pulau</h2>
                         <p class="section-desc">Rincian daftar harga trip snorkeling resmi (Snorkelling Trip Price List).</p>
                     </div>
 

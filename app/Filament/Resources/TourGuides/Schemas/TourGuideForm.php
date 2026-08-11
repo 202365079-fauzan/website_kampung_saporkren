@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\TourGuides\Schemas;
 
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
@@ -26,6 +27,7 @@ class TourGuideForm
                 Textarea::make('description')
                     ->label('Deskripsi Singkat')
                     ->columnSpanFull(),
+                
             ]);
     }
 }

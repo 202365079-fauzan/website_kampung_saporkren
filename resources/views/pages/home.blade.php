@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="card" style="padding: 0.75rem;">
-                    <img src="{{ asset('assets/bird/Wilson.jpeg') }}" alt="Keindahan Alam Kampung Saporkren" style="width: 100%; height: 380px; border-radius: 1.25rem; object-fit: cover;" loading="lazy" decoding="async">
+                    <img src="{{ asset('assets/kampung.jpeg') }}" alt="Keindahan Alam Kampung Saporkren" style="width: 100%; height: 400px; border-radius: 1.15rem; object-fit: cover;" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
                         <p class="card-text" style="color: var(--color-gray-600); margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6;">Jelajahi spot-spot eksotis Raja Ampat bersama pemandu lokal berpengalaman yang mengenal rute alam dan cerita budaya setempat.</p>
                         <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.875rem; color: var(--color-gray-600); margin-bottom: 2rem;">
                             <li class="list-bullet-item"><span class="bullet-dot"></span><span>Pemandu Asli Kampung Saporkren</span></li>
-                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Paket Tour 5 Pulau & Snorkeling</span></li>
+                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Paket Island Hopping & Snorkeling</span></li>
                             <li class="list-bullet-item"><span class="bullet-dot"></span><span>Bahasa Indonesia & English</span></li>
                         </ul>
                         <div class="mt-auto">

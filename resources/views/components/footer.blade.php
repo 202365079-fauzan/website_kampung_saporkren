@@ -12,12 +12,8 @@ $mapsUrl = config('saporkren.siteMeta.mapsUrl');
     <div class="container">
         <div class="footer-grid">
             <div>
-                <div class="footer-brand">
-                    <span class="footer-brand-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
-                        </svg>
-                    </span>
+                <div class="footer-brand" style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1.25rem;">
+                    <img src="{{ asset('assets/logo-kampung.png') }}" alt="Logo Kampung Saporkren" class="no-preview" style="width: 48px; height: 48px; border-radius: 9999px; object-fit: contain; background: white; padding: 3px; box-shadow: var(--shadow-sm);" />
                     <div class="flex-col">
                         <span class="footer-brand-text">{{ $brand }}</span>
                         <span style="font-size: 0.875rem; color: var(--color-gray-500);">{{ $tagline }}</span>
@@ -49,13 +45,17 @@ $mapsUrl = config('saporkren.siteMeta.mapsUrl');
                         </svg>
                         Lihat lokasi peta
                     </a>
+                    
+                    <div style="margin-top: 0.5rem;">
+                        <img src="{{ asset('assets/logo-kkn.jpeg') }}" alt="Logo KKN" class="no-preview" style="width: 75px; height: 75px; border-radius: 9999px; object-fit: contain; background: white; padding: 4px; box-shadow: var(--shadow-md); border: 2px solid var(--color-gray-200); transition: transform 0.3s ease; cursor: default;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="footer-bottom">
             <p>Copyright © {{ date('Y') }} {{ $brand }}. All rights reserved.</p>
-            <p>Official tourism website for Raja Ampat, Papua Barat Daya.</p>
+            <p>KKN Tematik Teknik Informatika, Universitas Papua</p>
         </div>
     </div>
 </footer>

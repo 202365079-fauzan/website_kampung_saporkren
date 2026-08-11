@@ -16,18 +16,29 @@ class HomestaysTable
         return $table
             ->columns([
                 TextColumn::make('name')
+                    ->label('Nama Homestay')
                     ->searchable(),
                 TextColumn::make('owner')
+                    ->label('Pemilik')
+                    ->searchable(),
+                TextColumn::make('capacity')
+                    ->label('Kapasitas')
                     ->searchable(),
                 TextColumn::make('price')
+                    ->label('Harga')
+                    ->money('IDR', decimalPlaces: 0, locale: 'id_ID')
                     ->searchable(),
-                ImageColumn::make('main_photo')
+                ImageColumn::make('image')
+                    ->label('Foto')
                     ->getStateUsing(function ($record) {
-                        if (!$record->main_photo) return null;
-                        if (str_starts_with($record->main_photo, 'img/')) {
-                            return asset($record->main_photo);
+                        if (!$record->image) return null;
+                        if (str_starts_with($record->image, 'http://') || str_starts_with($record->image, 'https://')) {
+                            return $record->image;
                         }
-                        return $record->main_photo;
+                        if (str_starts_with($record->image, 'assets/') || str_starts_with($record->image, 'img/')) {
+                            return asset($record->image);
+                        }
+                        return asset('storage/' . $record->image);
                     }),
                 TextColumn::make('maps_link')
                     ->searchable(),

@@ -21,15 +21,14 @@ class BirdWatchingForm
                     ->maxLength(255)
                     ->placeholder('Misal: Morning Birding Spotting'),
                 TextInput::make('duration')
-                    ->label('Durasi')
+                    ->label('Waktu Pengamatan')
                     ->required()
-                    ->maxLength(255)
-                    ->placeholder('Misal: 3 - 4 Jam (Pagi) / 1 Hari Penuh'),
+                    ->maxLength(255),
                 TextInput::make('price')
-                    ->label('Harga Paket')
-                    ->required()
-                    ->maxLength(255)
-                    ->placeholder('Misal: Rp 250.000 / Orang'),
+                    ->label('Harga')
+                    ->numeric()
+                    ->prefix('Rp')
+                    ->required(),
                 TagsInput::make('includes')
                     ->label('Fasilitas & Layanan Termasuk')
                     ->placeholder('Tekan enter untuk menambah (contoh: Pemandu Birding Lokal, Akses Hutan)')

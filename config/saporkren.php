@@ -8,8 +8,6 @@ return [
         'description' => 'Portal resmi ekowisata Kampung Saporkren. Temukan pemandu wisata lokal, pengamatan burung cenderawasih, homestay pesisir, dan produk UMKM khas Papua.',
         'email' => 'info@saporkren.id',
         'whatsapp' => 'https://wa.me/6281246768290',
-        'instagram' => 'https://www.instagram.com/saporkren',
-        'facebook' => 'https://www.facebook.com/saporkren',
         'mapsUrl' => 'https://www.google.com/maps/search/?api=1&query=Kampung+Saporkren+Raja+Ampat',
     ],
     'seoDefaults' => [
@@ -165,7 +163,6 @@ return [
         'Lotion anti-nyamuk & jas hujan ringan'
     ],
     'birdingWarnings' => [
-        'Dilarang keras menggunakan lampu kilat (flash) saat mengambil foto burung.',
         'Wajib menjaga ketenangan dan tidak membuat suara gaduh di area observasi.',
         'Dilarang merusak tanaman atau membuang sampah jenis apa pun di dalam hutan.',
         'Selalu ikuti arahan dan panduan dari pemandu lokal demi keselamatan bersama.'

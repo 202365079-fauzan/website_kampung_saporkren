@@ -18,15 +18,17 @@ class TourGuideResource extends Resource
 {
     protected static ?string $model = TourGuide::class;
 
-    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-users';
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-user-group';
 
-    protected static \UnitEnum|string|null $navigationGroup = 'Layanan Wisata';
+    protected static \UnitEnum|string|null $navigationGroup = 'Ekowisata & Akomodasi';
     
     protected static ?string $modelLabel = 'Tour Guide';
     
-    protected static ?string $pluralModelLabel = 'Tour Guide';
+    protected static ?string $pluralModelLabel = 'Pemandu Wisata';
 
     protected static ?string $recordTitleAttribute = 'name';
+
+
 
     public static function form(Schema $schema): Schema
     {

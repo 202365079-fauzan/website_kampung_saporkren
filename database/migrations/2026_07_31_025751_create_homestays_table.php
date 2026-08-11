@@ -15,10 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('owner')->nullable();
+            $table->string('capacity')->nullable();
             $table->text('short_description')->nullable();
             $table->json('facilities')->nullable();
             $table->integer('price')->nullable();
-            $table->string('main_photo')->nullable();
+            $table->string('image')->nullable();
             $table->string('maps_link')->nullable();
             $table->timestamps();
         });

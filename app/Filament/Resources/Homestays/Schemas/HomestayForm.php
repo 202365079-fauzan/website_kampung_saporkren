@@ -18,6 +18,9 @@ class HomestayForm
                     ->required(),
                 TextInput::make('owner')
                     ->label('Pemilik'),
+                TextInput::make('capacity')
+                    ->label('Kapasitas')
+                    ->placeholder('Misal: 2-4 Orang'),
                 Textarea::make('short_description')
                     ->label('Deskripsi Singkat')
                     ->columnSpanFull(),
@@ -25,18 +28,20 @@ class HomestayForm
                     ->label('Fasilitas')
                     ->columnSpanFull(),
                 TextInput::make('price')
-                    ->label('Harga (Per Malam)')
+                    ->label('Harga')
                     ->numeric()
                     ->prefix('Rp'),
-                FileUpload::make('main_photo')
-                    ->label('Foto Utama')
+                FileUpload::make('image')
+                    ->label('Foto')
+                    ->disk('public')
+                    ->directory('homestays')
+                    ->visibility('public')
                     ->image()
                     ->imageEditor()
-                    ->imageResizeMode('contain')
-                    ->imageResizeTargetWidth('1080')
-                    ->imageResizeTargetHeight('1080')
-                    ->directory('homestays')
-                    ->hint(fn ($record) => $record?->main_photo ? 'File saat ini: ' . $record->main_photo : null),
+                    ->imageResizeMode('cover')
+                    ->imageResizeTargetWidth('1600')
+                    ->imageResizeTargetHeight('1600')
+                    ->hint(fn ($record) => $record?->image ? 'Image: ' . $record->image : null),
                 TextInput::make('maps_link')
                     ->label('Link Google Maps'),
             ]);

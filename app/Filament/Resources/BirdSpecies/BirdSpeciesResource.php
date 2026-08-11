@@ -18,15 +18,17 @@ class BirdSpeciesResource extends Resource
 {
     protected static ?string $model = BirdSpecies::class;
 
-    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-sparkles';
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-globe-americas';
 
-    protected static \UnitEnum|string|null $navigationGroup = 'Alam & Konservasi';
+    protected static \UnitEnum|string|null $navigationGroup = 'Konservasi & Satwa';
     
     protected static ?string $modelLabel = 'Spesies Burung';
     
     protected static ?string $pluralModelLabel = 'Spesies Burung';
 
     protected static ?string $recordTitleAttribute = 'local_name';
+
+
 
     public static function form(Schema $schema): Schema
     {

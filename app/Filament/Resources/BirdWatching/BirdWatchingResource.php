@@ -20,7 +20,7 @@ class BirdWatchingResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-eye';
 
-    protected static \UnitEnum|string|null $navigationGroup = 'Alam & Konservasi';
+    protected static \UnitEnum|string|null $navigationGroup = 'Konservasi & Satwa';
 
     protected static ?string $slug = 'bird-watching-packages';
     

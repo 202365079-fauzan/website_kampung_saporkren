@@ -22,11 +22,16 @@ class BirdSpeciesForm
                 Textarea::make('description')
                     ->columnSpanFull(),
                 FileUpload::make('image')
+                    ->label('Foto Spesies')
+                    ->disk('public')
+                    ->directory('bird-species')
+                    ->visibility('public')
                     ->image()
                     ->imageEditor()
-                    ->imageResizeMode('contain')
-                    ->imageResizeTargetWidth('1080')
-                    ->imageResizeTargetHeight('1080'),
+                    ->imageResizeMode('cover')
+                    ->imageResizeTargetWidth('1600')
+                    ->imageResizeTargetHeight('1600')
+                    ->maxSize(3072),
             ]);
     }
 }

@@ -14,6 +14,7 @@ class TourPackage extends Model
         'type',
         'duration',
         'price',
+        'price_speedboat',
         'includes',
     ];
 

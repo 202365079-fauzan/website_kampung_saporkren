@@ -16,14 +16,15 @@ class BirdWatchingTable
         return $table
             ->columns([
                 TextColumn::make('name')
-                    ->label('Nama Paket Bird Watching')
+                    ->label('Nama Paket')
                     ->searchable()
                     ->sortable(),
                 TextColumn::make('duration')
-                    ->label('Durasi')
+                    ->label('Waktu Pengamatan')
                     ->searchable(),
                 TextColumn::make('price')
                     ->label('Harga')
+                    ->money('IDR', decimalPlaces: 0, locale: 'id_ID')
                     ->searchable()
                     ->sortable(),
             ])

@@ -14,4 +14,20 @@ class Homestay extends Model
     protected $casts = [
         'facilities' => 'array'
     ];
+
+    public function reviews()
+    {
+        return $this->morphMany(Review::class, 'reviewable')->latest();
+    }
+
+    public function getAverageRatingAttribute(): float
+    {
+        $avg = $this->reviews()->avg('rating');
+        return $avg ? round((float) $avg, 1) : 0.0;
+    }
+
+    public function getReviewsCountAttribute(): int
+    {
+        return $this->reviews()->count();
+    }
 }

@@ -34,7 +34,17 @@ class BirdSpeciesTable
                     ->label('Status Konservasi')
                     ->searchable(),
                 ImageColumn::make('image')
-                    ->label('Foto Burung'),
+                    ->label('Foto')
+                    ->getStateUsing(function ($record) {
+                        if (!$record->image) return null;
+                        if (str_starts_with($record->image, 'http://') || str_starts_with($record->image, 'https://')) {
+                            return $record->image;
+                        }
+                        if (str_starts_with($record->image, 'assets/') || str_starts_with($record->image, 'img/')) {
+                            return asset($record->image);
+                        }
+                        return asset('storage/' . $record->image);
+                    }),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

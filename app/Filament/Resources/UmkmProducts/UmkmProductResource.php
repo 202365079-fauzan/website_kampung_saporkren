@@ -20,13 +20,15 @@ class UmkmProductResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-shopping-bag';
 
-    protected static \UnitEnum|string|null $navigationGroup = 'Ekonomi Kreatif';
+    protected static \UnitEnum|string|null $navigationGroup = 'Ekonomi Adat & UMKM';
     
     protected static ?string $modelLabel = 'Produk UMKM';
     
-    protected static ?string $pluralModelLabel = 'Produk UMKM';
+    protected static ?string $pluralModelLabel = 'Produk & Kerajinan UMKM';
 
     protected static ?string $recordTitleAttribute = 'name';
+
+
 
     public static function form(Schema $schema): Schema
     {

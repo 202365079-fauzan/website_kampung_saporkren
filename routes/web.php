@@ -1,16 +1,16 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Homestay;
 use App\Models\TourGuide;
 use App\Models\TourPackage;
 use App\Models\UmkmProduct;
 use App\Models\BirdSpecies;
+use App\Http\Controllers\ReviewController;
 
 Route::get('/', function () {
     return view('pages.home', [
-        'homestays' => Homestay::take(3)->get(),
+        'homestays' => Homestay::with('reviews')->take(3)->get(),
         'tourGuides' => TourGuide::take(2)->get(),
     ]);
 });
@@ -18,15 +18,14 @@ Route::get('/', function () {
 Route::get('/tour-guide', function () {
     return view('pages.tour-guide', [
         'tourGuides' => TourGuide::all(),
-        'cardPackages' => TourPackage::where('type', 'tour_5_pulau')->get(),
-        'tripPackages' => TourPackage::where('type', 'trip')->get(),
-        'snorkelingPackages' => TourPackage::where('type', 'snorkeling')->get(),
+        'cardPackages' => TourPackage::where('type', 'island_hopping')->get(),
+        'snorkelingPackages' => TourPackage::where('type', 'snorkeling_trip')->get(),
     ]);
 });
 
 Route::get('/homestay', function () {
     return view('pages.homestay', [
-        'homestays' => Homestay::all(),
+        'homestays' => Homestay::with('reviews')->get(),
     ]);
 });
 
@@ -39,8 +38,8 @@ Route::get('/bird-watching', function () {
 
 Route::get('/umkm', function () {
     return view('pages.umkm', [
-        'kerajinanProducts' => UmkmProduct::where('category', 'like', '%Kerajinan%')->get(),
-        'makananProducts' => UmkmProduct::where('category', 'like', '%Makanan%')->get(),
+        'kerajinanProducts' => UmkmProduct::with('reviews')->where('category', 'like', '%Kerajinan%')->get(),
+        'makananProducts' => UmkmProduct::with('reviews')->where('category', 'like', '%Makanan%')->get(),
     ]);
 });
 
@@ -48,14 +47,6 @@ Route::get('/contact', function () {
     return view('pages.contact');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
 
-require __DIR__.'/auth.php';

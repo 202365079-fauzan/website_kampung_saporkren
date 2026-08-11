@@ -18,15 +18,17 @@ class HomestayResource extends Resource
 {
     protected static ?string $model = Homestay::class;
 
-    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-home';
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-home-modern';
 
-    protected static \UnitEnum|string|null $navigationGroup = 'Akomodasi';
+    protected static \UnitEnum|string|null $navigationGroup = 'Ekowisata & Akomodasi';
     
     protected static ?string $modelLabel = 'Homestay';
     
-    protected static ?string $pluralModelLabel = 'Homestay';
+    protected static ?string $pluralModelLabel = 'Homestays';
 
     protected static ?string $recordTitleAttribute = 'name';
+
+
 
     public static function form(Schema $schema): Schema
     {

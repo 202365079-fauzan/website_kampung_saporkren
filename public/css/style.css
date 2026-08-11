@@ -1,7 +1,7 @@
 /* ==========================================================================
    Design System & Core Variables (Tourism Portal - Kampung Saporkren)
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
 
 :root {
     /* Color Palette */
@@ -26,6 +26,7 @@
 
     /* Typography System */
     --font-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'Momo Trust Display', sans-serif;
 
     /* Elevation & Shadows */
     --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06);
@@ -127,17 +128,18 @@ img {
 .hero-welcome {
     display: block;
     font-size: 2.25rem;
-    font-weight: 500;
-    opacity: 0.95;
+    font-weight: 800;
 }
 
 .hero-brand {
+    font-family: var(--font-mono);
     display: block;
     font-size: 4rem;
     font-weight: 800;
     color: var(--color-sand);
-    text-shadow: 0 10px 30px rgba(0,0,0,0.35);
-    margin-top: 0.25rem;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    margin-top: 0.05rem;
+    letter-spacing: -0.03em;
 }
 
 .section-title {
@@ -170,6 +172,10 @@ img {
     text-transform: uppercase;
     color: var(--color-ocean-dark);
     margin-bottom: 1rem;
+}
+
+.hero-location {
+    font-size: 0.9rem;
 }
 
 
@@ -276,11 +282,17 @@ img {
 }
 
 .nav-brand-text {
-    font-size: 1.2rem;
+    font-family: var(--font-mono);
+    font-size: 1.15rem;
     font-weight: 800;
     color: var(--color-dark);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     line-height: 1.2;
+}
+
+.font-mono,
+.font-brand {
+    font-family: var(--font-mono) !important;
 }
 
 .nav-links {
@@ -382,6 +394,14 @@ img {
     .navbar .container {
         height: 4.25rem;
     }
+
+    .hero-location {
+        font-size: 0.6rem;
+    }
+
+    .btn-lg {
+        font-size: 0.8rem;
+    }
 }
 
 /* ==========================================================================
@@ -445,7 +465,7 @@ img {
     .card-padded {
         padding: 1rem;
     }
-    
+
     .card-padded-lg {
         padding: 1.5rem;
     }
@@ -500,9 +520,11 @@ img {
 }
 
 .footer-brand-text {
+    font-family: var(--font-mono);
     font-size: 1.35rem;
     font-weight: 800;
     color: white;
+    letter-spacing: -0.03em;
 }
 
 .footer-text {
@@ -571,14 +593,14 @@ img {
 .page-hero-overlay-h {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 10%, rgba(255,255,255,0.6) 30%, rgba(255,255,255,0) 60%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 10%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0) 60%);
     pointer-events: none;
 }
 
 .page-hero-overlay-v {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.6) 25%, rgba(255,255,255,1) 35%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 1) 35%);
     pointer-events: none;
 }
 
@@ -710,7 +732,7 @@ img {
 }
 
 .card-img-wrap-sm {
-    height: 200px;
+    aspect-ratio: 1 / 1;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -720,6 +742,59 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.img-preview-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.preview-badge {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--color-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(4px);
+    transition: transform 0.25s ease;
+}
+
+.card-img-wrap-sm:hover .img-preview-overlay {
+    opacity: 1;
+}
+
+.card-img-wrap-sm:hover .preview-badge {
+    transform: translateY(0);
+}
+
+.card-img-wrap-sm:hover .card-img {
+    transform: scale(1.05);
+}
+
+.card-img-wrap,
+.card-img-wrap-sm,
+.card-image-wrap,
+.card-img,
+.card-image {
+    cursor: pointer;
+}
+
+.card-img-wrap:hover .card-img,
+.card-image-wrap:hover .card-image,
+.card-image-wrap:hover .card-img {
+    transform: scale(1.04);
 }
 
 .card-body {
@@ -814,4 +889,219 @@ img {
     padding: 2rem;
     box-shadow: var(--shadow-md);
     border: 1px solid var(--color-gray-200);
+}
+
+/* ==========================================================================
+   Review & Star Rating Components
+   ========================================================================== */
+.rating-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    background-color: #fffbe6;
+    border: 1px solid #ffe58f;
+    font-size: 0.825rem;
+    font-weight: 700;
+    color: #d48806;
+}
+
+.rating-badge svg {
+    width: 1rem;
+    height: 1rem;
+    fill: #fadb14;
+    color: #fadb14;
+}
+
+.rating-count {
+    color: var(--color-gray-500);
+    font-weight: 500;
+    font-size: 0.775rem;
+}
+
+.btn-review-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 0.75rem;
+    background: var(--color-gray-50);
+    border: 1px solid var(--color-gray-300);
+    color: var(--color-dark);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    margin-top: 0.75rem;
+}
+
+.btn-review-trigger:hover {
+    background: var(--color-ocean-light);
+    border-color: var(--color-ocean);
+    color: var(--color-ocean-dark);
+    transform: translateY(-1px);
+}
+
+/* Modal Overlay */
+body.modal-open .navbar {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(-100%) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.modal-open {
+    overflow: hidden !important;
+}
+
+.review-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    animation: fadeIn 0.25s ease-out;
+}
+
+.review-modal-card {
+    background: white;
+    width: 100%;
+    max-width: 680px;
+    max-height: 90vh;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--color-gray-200);
+    animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.review-modal-header {
+    padding: 1.25rem 1.75rem;
+    border-bottom: 1px solid var(--color-gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-gray-50);
+}
+
+.review-modal-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+.review-modal-close {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem;
+    border-radius: 9999px;
+    color: var(--color-gray-400);
+    transition: var(--transition);
+}
+
+.review-modal-close:hover {
+    background: var(--color-gray-200);
+    color: var(--color-dark);
+}
+
+.review-modal-body {
+    padding: 1.75rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+/* Interactive Star Rating Selector */
+.star-selector {
+    display: flex;
+    gap: 0.35rem;
+    align-items: center;
+}
+
+.star-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.15rem;
+    transition: transform 0.15s ease;
+}
+
+.star-btn:hover {
+    transform: scale(1.2);
+}
+
+.star-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: #cbd5e1;
+    color: #cbd5e1;
+    transition: fill 0.15s ease, color 0.15s ease;
+}
+
+.star-icon.active {
+    fill: #fadb14;
+    color: #fadb14;
+}
+
+/* Review Item List */
+.review-item-card {
+    background: var(--color-gray-50);
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--color-gray-200);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.review-avatar-badge {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, var(--color-ocean), var(--color-tropical));
+    color: white;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
