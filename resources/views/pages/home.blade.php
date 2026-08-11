@@ -44,11 +44,11 @@
                         <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-dark);">Tour Guide Lokal</h3>
                         <p class="card-text" style="color: var(--color-gray-600); margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6;">Jelajahi spot-spot eksotis Raja Ampat bersama pemandu lokal berpengalaman yang mengenal rute alam dan cerita budaya setempat.</p>
                         <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.875rem; color: var(--color-gray-600); margin-bottom: 2rem;">
-                            <li style="display: flex; align-items: center; gap: 0.75rem;"><span style="height: 0.45rem; width: 0.45rem; border-radius: 9999px; background-color: var(--color-sand);"></span><span>Pemandu Asli Kampung Saporkren</span></li>
-                            <li style="display: flex; align-items: center; gap: 0.75rem;"><span style="height: 0.45rem; width: 0.45rem; border-radius: 9999px; background-color: var(--color-sand);"></span><span>Paket Tour 5 Pulau & Snorkeling</span></li>
-                            <li style="display: flex; align-items: center; gap: 0.75rem;"><span style="height: 0.45rem; width: 0.45rem; border-radius: 9999px; background-color: var(--color-sand);"></span><span>Bahasa Indonesia & English</span></li>
+                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Pemandu Asli Kampung Saporkren</span></li>
+                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Paket Tour 5 Pulau & Snorkeling</span></li>
+                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Bahasa Indonesia & English</span></li>
                         </ul>
-                        <div style="margin-top: auto;">
+                        <div class="mt-auto">
                             <a href="/tour-guide" class="btn btn-primary" style="width: 100%; justify-content: center;">Lihat Tour Guide &rarr;</a>
                         </div>
                     </div>
@@ -61,11 +61,11 @@
                         <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-dark);">Bird Watching</h3>
                         <p class="card-text" style="color: var(--color-gray-600); margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6;">Saksikan langsung pesona burung Cenderawasih endemik Papua di dalam hutan konservasi Saporkren yang terjaga kelestariannya.</p>
                         <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.875rem; color: var(--color-gray-600); margin-bottom: 2rem;">
-                            <li style="display: flex; align-items: center; gap: 0.75rem;"><span style="height: 0.45rem; width: 0.45rem; border-radius: 9999px; background-color: var(--color-sand);"></span><span>Spot Cenderawasih Merah & Botak</span></li>
-                            <li style="display: flex; align-items: center; gap: 0.75rem;"><span style="height: 0.45rem; width: 0.45rem; border-radius: 9999px; background-color: var(--color-sand);"></span><span>Paket Pengamatan Pagi & Full Day</span></li>
-                            <li style="display: flex; align-items: center; gap: 0.75rem;"><span style="height: 0.45rem; width: 0.45rem; border-radius: 9999px; background-color: var(--color-sand);"></span><span>Etika Ekowisata Ramah Satwa</span></li>
+                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Spot Cenderawasih Merah & Botak</span></li>
+                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Paket Pengamatan Pagi & Full Day</span></li>
+                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Etika Ekowisata Ramah Satwa</span></li>
                         </ul>
-                        <div style="margin-top: auto;">
+                        <div class="mt-auto">
                             <a href="/bird-watching" class="btn btn-primary" style="width: 100%; justify-content: center; background-color: var(--color-tropical);">Lihat Bird Watching &rarr;</a>
                         </div>
                     </div>
@@ -78,11 +78,11 @@
                         <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-dark);">UMKM Lokal</h3>
                         <p class="card-text" style="color: var(--color-gray-600); margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6;">Dukung ekonomi warga dengan membawa pulang hasil kerajinan rajut khas Papua serta produk kuliner olahan olahan laut berkualitas.</p>
                         <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.875rem; color: var(--color-gray-600); margin-bottom: 2rem;">
-                            <li style="display: flex; align-items: center; gap: 0.75rem;"><span style="height: 0.45rem; width: 0.45rem; border-radius: 9999px; background-color: var(--color-sand);"></span><span>Noken Rajut Alami Papua</span></li>
-                            <li style="display: flex; align-items: center; gap: 0.75rem;"><span style="height: 0.45rem; width: 0.45rem; border-radius: 9999px; background-color: var(--color-sand);"></span><span>Kuliner Olahan Hasil Laut Segar</span></li>
-                            <li style="display: flex; align-items: center; gap: 0.75rem;"><span style="height: 0.45rem; width: 0.45rem; border-radius: 9999px; background-color: var(--color-sand);"></span><span>Langsung dari Perajin & Warga</span></li>
+                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Noken Rajut Alami Papua</span></li>
+                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Kuliner Olahan Hasil Laut Segar</span></li>
+                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Langsung dari Perajin & Warga</span></li>
                         </ul>
-                        <div style="margin-top: auto;">
+                        <div class="mt-auto">
                             <a href="/umkm" class="btn btn-primary" style="width: 100%; justify-content: center; background-color: #f97316;">Lihat Produk UMKM &rarr;</a>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                     </div>
 
                     <div class="card" style="padding: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid var(--color-ocean);">
-                        <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-tropical);">Alamat Resmi</p>
+                        <p class="category-label">Alamat Resmi</p>
                         <p style="margin-top: 0.35rem; font-size: 1rem; font-weight: 600; color: var(--color-dark);">Kampung Saporkren, Distrik Waigeo Selatan</p>
                         <p style="font-size: 0.875rem; color: var(--color-gray-600);">Kabupaten Raja Ampat, Papua Barat Daya</p>
                     </div>

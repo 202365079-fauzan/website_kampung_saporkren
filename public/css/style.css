@@ -116,7 +116,6 @@ img {
 
 /* Typography Hierarchy */
 .hero-title {
-    font-family: var(--font-primary);
     font-size: 3.25rem;
     font-weight: 800;
     color: var(--color-dark);
@@ -142,7 +141,6 @@ img {
 }
 
 .section-title {
-    font-family: var(--font-primary);
     font-size: 2.25rem;
     font-weight: 700;
     color: var(--color-dark);
@@ -152,7 +150,6 @@ img {
 }
 
 .section-subtitle {
-    font-family: var(--font-primary);
     font-size: 1.05rem;
     color: var(--color-gray-500);
     line-height: 1.6;
@@ -175,36 +172,12 @@ img {
     margin-bottom: 1rem;
 }
 
-/* Text & Colors */
-.text-center {
-    text-align: center;
-}
 
-.text-left {
-    text-align: left;
-}
-
-.text-ocean {
-    color: var(--color-ocean);
-}
-
-.text-tropical {
-    color: var(--color-tropical);
-}
-
-.text-dark {
-    color: var(--color-dark);
-}
-
-.text-gray {
-    color: var(--color-gray-500);
-}
 
 /* ==========================================================================
    Buttons System
    ========================================================================== */
 .btn {
-    font-family: var(--font-primary);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -255,7 +228,6 @@ img {
    Navbar Architecture
    ========================================================================== */
 .navbar {
-    font-family: var(--font-primary);
     position: fixed;
     top: 0;
     left: 0;
@@ -304,7 +276,6 @@ img {
 }
 
 .nav-brand-text {
-    font-family: var(--font-primary);
     font-size: 1.2rem;
     font-weight: 800;
     color: var(--color-dark);
@@ -319,7 +290,6 @@ img {
 }
 
 .nav-link {
-    font-family: var(--font-primary);
     font-size: 0.95rem;
     font-weight: 500;
     color: var(--color-gray-600);
@@ -491,7 +461,6 @@ img {
    Footer
    ========================================================================== */
 .footer {
-    font-family: var(--font-primary);
     background: var(--color-dark);
     color: var(--color-gray-300);
     padding: 4.5rem 0 2rem;
@@ -531,7 +500,6 @@ img {
 }
 
 .footer-brand-text {
-    font-family: var(--font-primary);
     font-size: 1.35rem;
     font-weight: 800;
     color: white;
@@ -546,7 +514,6 @@ img {
 }
 
 .footer-title {
-    font-family: var(--font-primary);
     font-size: 1.1rem;
     font-weight: 700;
     color: white;
@@ -588,4 +555,263 @@ img {
         gap: 0.75rem;
         text-align: center;
     }
+}
+
+/* ==========================================================================
+   Page Hero (Sub-pages with background image)
+   ========================================================================== */
+.page-hero {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding-bottom: 5rem;
+}
+
+.page-hero-overlay-h {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 10%, rgba(255,255,255,0.6) 30%, rgba(255,255,255,0) 60%);
+    pointer-events: none;
+}
+
+.page-hero-overlay-v {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.6) 25%, rgba(255,255,255,1) 35%);
+    pointer-events: none;
+}
+
+.page-hero-inner {
+    position: relative;
+    z-index: 10;
+    padding-top: 8rem;
+}
+
+.page-header {
+    max-width: 800px;
+    margin-bottom: 4rem;
+}
+
+.subpage-title {
+    text-align: left;
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
+}
+
+.hero-text {
+    text-align: left;
+    font-size: 1.125rem;
+    color: var(--color-gray-600);
+}
+
+.cta-buttons {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* ==========================================================================
+   Section Components
+   ========================================================================== */
+.section-header {
+    margin-bottom: 2rem;
+}
+
+.section-title-sm {
+    font-size: 2rem;
+    margin-top: 0.75rem;
+}
+
+.section-desc {
+    color: var(--color-gray-500);
+    margin-top: 0.25rem;
+}
+
+.section-card-mb {
+    margin-bottom: 3rem;
+}
+
+/* ==========================================================================
+   Info Cells & Labels
+   ========================================================================== */
+.info-cell {
+    background: var(--color-gray-50);
+    padding: 0.6rem 0.75rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-gray-200);
+}
+
+.info-cell-label {
+    font-weight: 700;
+    color: var(--color-dark);
+    display: block;
+}
+
+.info-cell-value {
+    color: var(--color-gray-600);
+}
+
+.category-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-tropical);
+}
+
+.meta-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-tropical);
+}
+
+/* ==========================================================================
+   List & Bullet Components
+   ========================================================================== */
+.bullet-dot {
+    height: 0.45rem;
+    width: 0.45rem;
+    border-radius: 9999px;
+    background-color: var(--color-sand);
+    flex-shrink: 0;
+}
+
+.bullet-dot-md {
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 9999px;
+    background-color: var(--color-sand);
+    flex-shrink: 0;
+}
+
+.list-bullet-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.list-bullet-start {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+/* ==========================================================================
+   Card Helpers
+   ========================================================================== */
+.card-img-wrap {
+    height: 220px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img-wrap-sm {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-footer-split {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-gray-100);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-article {
+    border: 1px solid var(--color-gray-200);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: white;
+    box-shadow: var(--shadow-sm);
+}
+
+.highlight-card {
+    background: white;
+    border: 1px solid var(--color-gray-200);
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.feature-card {
+    background: var(--color-gray-50);
+    padding: 1.75rem;
+    border-radius: 1.25rem;
+    border: 1px solid var(--color-gray-200);
+}
+
+/* ==========================================================================
+   Utility Helpers
+   ========================================================================== */
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* ==========================================================================
+   Guest Layout (Auth Pages)
+   ========================================================================== */
+.guest-body {
+    background-color: var(--color-gray-50);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.guest-container {
+    width: 100%;
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.guest-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.guest-card {
+    background: white;
+    border-radius: var(--radius-2xl);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-gray-200);
 }

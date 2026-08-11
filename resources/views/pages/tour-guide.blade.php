@@ -3,22 +3,22 @@ $meta = config('saporkren.siteMeta');
 @endphp
 
 <x-app-layout>
-    <main id="main-content" style="background-image: url('{{ asset('assets/tour-guides/kampung-saporkren-bg.png') }}'); background-size: cover; background-position: center; background-attachment: fixed; position: relative; padding-bottom: 5rem;">
-        <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 10%, rgba(255,255,255,0.6) 30%, rgba(255,255,255,0) 60%); pointer-events: none;"></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.6) 25%, rgba(255,255,255,1) 35%); pointer-events: none;"></div>
+    <main id="main-content" class="page-hero" style="background-image: url('{{ asset('assets/tour-guides/kampung-saporkren-bg.png') }}');">
+        <div class="page-hero-overlay-h"></div>
+        <div class="page-hero-overlay-v"></div>
         
-        <div class="container" style="position: relative; z-index: 10; padding-top: 8rem;">
+        <div class="container page-hero-inner">
             <!-- Header section -->
-            <div style="max-width: 800px; margin-bottom: 4rem;">
-                <span class="hero-badge" style="margin-bottom: 1rem;">Tour Guide Lokal</span>
-                <h1 class="hero-title" style="text-align: left; font-size: clamp(2.25rem, 5vw, 3.25rem);">
+            <div class="page-header">
+                <span class="hero-badge">Tour Guide Lokal</span>
+                <h1 class="hero-title subpage-title">
                     Pemandu Lokal Berpengalaman Kampung Saporkren
                 </h1>
-                <p class="hero-text" style="text-align: left; font-size: 1.125rem; color: var(--color-gray-600);">
+                <p class="hero-text">
                     Nikmati perjalanan aman, nyaman, dan bermakna bersama warga lokal asli Saporkren yang menguasai navigasi perairan, lokasi pengamatan satwa, dan sejarah kebudayaan Raja Ampat.
                 </p>
                 
-                <div style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem;">
+                <div class="cta-buttons">
                     <a href="/contact" class="btn btn-primary">
                         <span>Pesan Tour Guide</span>
                         <svg aria-hidden="true" style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -29,10 +29,10 @@ $meta = config('saporkren.siteMeta');
             <!-- 1. Daftar Profil Tour Guide Lokal -->
             <section class="py-8">
                 <div class="card-padded-lg" style="background: white; border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--color-gray-200); margin-bottom: 3rem;">
-                    <div style="margin-bottom: 2rem;">
+                    <div class="section-header">
                         <span class="hero-badge">Tim Pemandu</span>
-                        <h2 class="section-title" style="font-size: 2rem; margin-top: 0.75rem;">Daftar Profil Tour Guide Lokal</h2>
-                        <p style="color: var(--color-gray-500); margin-top: 0.25rem;">Setiap pemandu dilengkapi pengalaman lapangan dan pengetahuan navigasi yang teruji.</p>
+                        <h2 class="section-title section-title-sm">Daftar Profil Tour Guide Lokal</h2>
+                        <p class="section-desc">Setiap pemandu dilengkapi pengalaman lapangan dan pengetahuan navigasi yang teruji.</p>
                     </div>
 
                     <div class="grid grid-cols-3" style="gap: 2rem;">
@@ -45,20 +45,20 @@ $meta = config('saporkren.siteMeta');
                                 <p style="color: var(--color-gray-600); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">{{ $guide->description }}</p>
 
                                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: auto;">
-                                    <div style="background: var(--color-gray-50); padding: 0.6rem 0.75rem; border-radius: 0.75rem; border: 1px solid var(--color-gray-200); word-break: break-word;">
-                                        <p style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-tropical);">Spesialisasi</p>
+                                    <div class="info-cell" style="word-break: break-word;">
+                                        <p class="meta-label">Spesialisasi</p>
                                         <p style="font-size: 0.85rem; color: var(--color-dark); margin-top: 0.25rem; font-weight: 500;">{{ $guide->specialty }}</p>
                                     </div>
-                                    <div style="background: var(--color-gray-50); padding: 0.6rem 0.75rem; border-radius: 0.75rem; border: 1px solid var(--color-gray-200); word-break: break-word;">
-                                        <p style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-tropical);">Bahasa</p>
+                                    <div class="info-cell" style="word-break: break-word;">
+                                        <p class="meta-label">Bahasa</p>
                                         <p style="font-size: 0.85rem; color: var(--color-dark); margin-top: 0.25rem; font-weight: 500;">{{ $guide->languages }}</p>
                                     </div>
-                                    <div style="background: var(--color-gray-50); padding: 0.6rem 0.75rem; border-radius: 0.75rem; border: 1px solid var(--color-gray-200); word-break: break-word;">
-                                        <p style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-tropical);">Pengalaman</p>
+                                    <div class="info-cell" style="word-break: break-word;">
+                                        <p class="meta-label">Pengalaman</p>
                                         <p style="font-size: 0.85rem; color: var(--color-dark); margin-top: 0.25rem; font-weight: 500;">{{ $guide->experience }}</p>
                                     </div>
-                                    <div style="background: var(--color-gray-50); padding: 0.6rem 0.75rem; border-radius: 0.75rem; border: 1px solid var(--color-gray-200); word-break: break-word;">
-                                        <p style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-tropical);">Transportasi</p>
+                                    <div class="info-cell" style="word-break: break-word;">
+                                        <p class="meta-label">Transportasi</p>
                                         <p style="font-size: 0.85rem; color: var(--color-dark); margin-top: 0.25rem; font-weight: 500;">{{ $guide->transport }}</p>
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@ $meta = config('saporkren.siteMeta');
                     <div class="grid grid-cols-2" style="align-items: center; gap: 3.5rem;">
                         <div>
                             <span class="hero-badge">Mengapa Pemandu Lokal?</span>
-                            <h2 class="section-title" style="font-size: 2rem; margin-top: 0.75rem;">
+                            <h2 class="section-title section-title-sm">
                                 Keunggulan Memilih Tour Guide Asli Kampung Saporkren
                             </h2>
                             <p style="color: var(--color-gray-600); font-size: 0.95rem; margin-top: 0.75rem; line-height: 1.65;">
@@ -88,7 +88,7 @@ $meta = config('saporkren.siteMeta');
                         </div>
 
                         <div style="display: flex; flex-direction: column; gap: 1.25rem;">
-                            <div style="background: white; border: 1px solid var(--color-gray-200); border-radius: 1.25rem; padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                            <div class="highlight-card">
                                 <div style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-ocean);">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 1.5rem; height: 1.5rem;"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
                                     <p style="font-size: 1rem; font-weight: 700; color: var(--color-dark);">Pengetahuan Titik Terbaik (Spot Rahasia)</p>
@@ -98,7 +98,7 @@ $meta = config('saporkren.siteMeta');
                                 </p>
                             </div>
 
-                            <div style="background: white; border: 1px solid var(--color-gray-200); border-radius: 1.25rem; padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                            <div class="highlight-card">
                                 <div style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-tropical);">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 1.5rem; height: 1.5rem;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                                     <p style="font-size: 1rem; font-weight: 700; color: var(--color-dark);">Keamanan & Utamakan Keselamatan</p>
@@ -117,10 +117,10 @@ $meta = config('saporkren.siteMeta');
                 <div class="card" style="padding: 2.5rem;">
                     
                     <!-- 3a. Paket Tour ke 5 Pulau (1 day - 6 day) -->
-                    <div style="margin-bottom: 2rem;">
+                    <div class="section-header">
                         <span class="hero-badge">Pilihan Paket</span>
-                        <h2 class="section-title" style="font-size: 2rem; margin-top: 0.75rem;">Paket Tour ke 5 Pulau </h2>
-                        <p style="color: var(--color-gray-500); margin-top: 0.25rem;">Pilihan fleksibel perjalanan eksklusif mengelilingi 5 pulau eksotis di Raja Ampat.</p>
+                        <h2 class="section-title section-title-sm">Paket Tour ke 5 Pulau </h2>
+                        <p class="section-desc">Pilihan fleksibel perjalanan eksklusif mengelilingi 5 pulau eksotis di Raja Ampat.</p>
                     </div>
 
                     <div class="grid grid-cols-3" style="gap: 1.75rem;">
@@ -187,8 +187,8 @@ $meta = config('saporkren.siteMeta');
 
                     <!-- 3b. Paket Trip ke Pulau (Tabel) -->
                     <div style="margin-bottom: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-gray-200);">
-                        <h2 class="section-title" style="font-size: 2rem; margin-top: 0.75rem;">Paket Trip ke Pulau</h2>
-                        <p style="color: var(--color-gray-500); margin-top: 0.25rem;">Rute perjalanan populer menuju destinasi pulau ikonik di Raja Ampat.</p>
+                        <h2 class="section-title section-title-sm">Paket Trip ke Pulau</h2>
+                        <p class="section-desc">Rute perjalanan populer menuju destinasi pulau ikonik di Raja Ampat.</p>
                     </div>
 
                     <div style="overflow-x: auto; margin-bottom: 3.5rem; border: 1px solid var(--color-gray-200); border-radius: 1rem;">
@@ -224,8 +224,8 @@ $meta = config('saporkren.siteMeta');
 
                     <!-- 3c. Paket Trip Snorkeling ke Pulau -->
                     <div style="margin-bottom: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-gray-200);">
-                        <h2 class="section-title" style="font-size: 2rem; margin-top: 0.75rem;">Paket Trip Snorkeling ke Pulau</h2>
-                        <p style="color: var(--color-gray-500); margin-top: 0.25rem;">Rincian daftar harga trip snorkeling resmi (Snorkelling Trip Price List).</p>
+                        <h2 class="section-title section-title-sm">Paket Trip Snorkeling ke Pulau</h2>
+                        <p class="section-desc">Rincian daftar harga trip snorkeling resmi (Snorkelling Trip Price List).</p>
                     </div>
 
                     <div style="overflow-x: auto; border: 1px solid var(--color-gray-200); border-radius: 1rem;">

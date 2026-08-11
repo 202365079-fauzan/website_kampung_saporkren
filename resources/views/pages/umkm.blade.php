@@ -3,22 +3,22 @@ $meta = config('saporkren.siteMeta');
 @endphp
 
 <x-app-layout>
-    <main id="main-content" style="background-image: url('{{ asset('assets/umkm/umkmbg.png') }}'); background-size: cover; background-position: center; background-attachment: fixed; position: relative; padding-bottom: 5rem;">
-        <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 10%, rgba(255,255,255,0.6) 30%, rgba(255,255,255,0) 60%); pointer-events: none;"></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.6) 25%, rgba(255,255,255,1) 35%); pointer-events: none;"></div>
+    <main id="main-content" class="page-hero" style="background-image: url('{{ asset('assets/umkm/umkmbg.png') }}');">
+        <div class="page-hero-overlay-h"></div>
+        <div class="page-hero-overlay-v"></div>
         
-        <div class="container" style="position: relative; z-index: 10; padding-top: 8rem;">
+        <div class="container page-hero-inner">
             <!-- Header section -->
-            <div style="max-width: 800px; margin-bottom: 4rem;">
-                <span class="hero-badge" style="margin-bottom: 1rem;">Ekonomi Kreatif UMKM</span>
-                <h1 class="hero-title" style="text-align: left; font-size: clamp(2.25rem, 5vw, 3.25rem);">
+            <div class="page-header">
+                <span class="hero-badge">Ekonomi Kreatif UMKM</span>
+                <h1 class="hero-title subpage-title">
                     Produk UMKM Lokal Kampung Saporkren
                 </h1>
-                <p class="hero-text" style="text-align: left; font-size: 1.125rem; color: var(--color-gray-600);">
+                <p class="hero-text">
                     Dukung perekonomian warga lokal dengan membawa pulang hasil karya tangan autentik khas Papua serta aneka produk makanan olahan hasil laut Kampung Saporkren.
                 </p>
                 
-                <div style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem;">
+                <div class="cta-buttons">
                     <a href="/contact" class="btn btn-primary">
                         <span>Pesan / Hubungi Penjual</span>
                         <svg aria-hidden="true" style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -29,21 +29,21 @@ $meta = config('saporkren.siteMeta');
             <!-- SECTION 1: KERAJINAN -->
             <section class="py-8">
                 <div class="card card-padded-lg" style="margin-bottom: 3rem;">
-                    <div style="margin-bottom: 2rem;">
+                    <div class="section-header">
                         <span class="hero-badge" style="background-color: var(--color-tropical); color: white;">Kerajinan Tangan & Souvenir</span>
-                        <h2 class="section-title" style="font-size: 2rem; margin-top: 0.75rem;">Kerajinan Tangan & Souvenir Khas Papua</h2>
-                        <p style="color: var(--color-gray-500); margin-top: 0.25rem;">Hasil rajutan kayu alami dan suvenir tradisional buatan tangan perajin lokal Saporkren.</p>
+                        <h2 class="section-title section-title-sm">Kerajinan Tangan & Souvenir Khas Papua</h2>
+                        <p class="section-desc">Hasil rajutan kayu alami dan suvenir tradisional buatan tangan perajin lokal Saporkren.</p>
                     </div>
 
                     <div class="grid grid-cols-3" style="gap: 2rem;">
                         @forelse ($kerajinanProducts as $product)
-                            <article style="border: 1px solid var(--color-gray-200); border-radius: 1.5rem; display: flex; flex-direction: column; overflow: hidden; background: white; box-shadow: var(--shadow-sm);">
+                            <article class="product-article">
                                 @if ($product->image)
-                                    <div style="height: 200px; width: 100%; overflow: hidden; position: relative;">
+                                    <div class="card-img-wrap-sm">
                                         @if(Str::startsWith($product->image, 'http'))
-                                            <img src="{{ $product->image }}" alt="{{ $product->name }}" style="width: 100%; height: 100%; object-fit: cover;" />
+                                            <img src="{{ $product->image }}" alt="{{ $product->name }}" class="card-img" />
                                         @else
-                                            <img src="{{ asset(Str::startsWith($product->image, 'storage/') ? $product->image : 'storage/'.$product->image) }}" alt="{{ $product->name }}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='{{ asset($product->image) }}'" />
+                                            <img src="{{ asset(Str::startsWith($product->image, 'storage/') ? $product->image : 'storage/'.$product->image) }}" alt="{{ $product->name }}" class="card-img" onerror="this.src='{{ asset($product->image) }}'" />
                                         @endif
                                     </div>
                                 @else
@@ -52,14 +52,14 @@ $meta = config('saporkren.siteMeta');
                                     </div>
                                 @endif
                                 
-                                <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
-                                    <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-tropical);">
+                                <div class="card-body">
+                                    <span class="category-label">
                                         {{ $product->category }}
                                     </span>
                                     <h3 style="margin-top: 0.5rem; font-size: 1.35rem; font-weight: 700; color: var(--color-dark);">{{ $product->name }}</h3>
                                     <p style="margin-top: 0.75rem; font-size: 0.875rem; line-height: 1.5; color: var(--color-gray-600); flex-grow: 1;">{{ $product->description }}</p>
                                     
-                                    <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--color-gray-100); display: flex; justify-content: space-between; align-items: center;">
+                                    <div class="card-footer-split">
                                         <div>
                                             <span style="font-size: 0.75rem; color: var(--color-gray-500); display: block;">Harga:</span>
                                             <span style="font-weight: 700; font-size: 1.1rem; color: var(--color-ocean);">Rp {{ is_numeric($product->price) ? number_format((float)$product->price, 0, ',', '.') : $product->price }}</span>
@@ -81,17 +81,17 @@ $meta = config('saporkren.siteMeta');
             <!-- SECTION 2: MAKANAN & KULINER OLAHAN -->
             <section class="py-8">
                 <div class="card card-padded-lg">
-                    <div style="margin-bottom: 2rem;">
+                    <div class="section-header">
                         <span class="hero-badge" style="background-color: #f97316; color: white;">Makanan & Kuliner Olahan</span>
-                        <h2 class="section-title" style="font-size: 2rem; margin-top: 0.75rem;">Kuliner & Makanan Olahan Khas Saporkren</h2>
-                        <p style="color: var(--color-gray-500); margin-top: 0.25rem;">Camilan dan makanan olahan hasil laut gurih buatan ibu-ibu kelompok tani & nelayan Kampung Saporkren.</p>
+                        <h2 class="section-title section-title-sm">Kuliner & Makanan Olahan Khas Saporkren</h2>
+                        <p class="section-desc">Camilan dan makanan olahan hasil laut gurih buatan ibu-ibu kelompok tani & nelayan Kampung Saporkren.</p>
                     </div>
 
                     <div class="grid grid-cols-3" style="gap: 2rem;">
                         @forelse ($makananProducts as $product)
-                            <article style="border: 1px solid var(--color-gray-200); border-radius: 1.5rem; display: flex; flex-direction: column; overflow: hidden; background: white; box-shadow: var(--shadow-sm);">
+                            <article class="product-article">
                                 @if ($product->image)
-                                    <div style="height: 200px; width: 100%; overflow: hidden; position: relative;">
+                                    <div class="card-img-wrap-sm">
                                         @if(Str::startsWith($product->image, 'http'))
                                             <img src="{{ $product->image }}" alt="{{ $product->name }}" style="width: 100%; height: 100%; object-fit: cover;" />
                                         @else
@@ -104,14 +104,14 @@ $meta = config('saporkren.siteMeta');
                                     </div>
                                 @endif
                                 
-                                <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                                <div class="card-body">
                                     <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #f97316;">
                                         {{ $product->category }}
                                     </span>
                                     <h3 style="margin-top: 0.5rem; font-size: 1.35rem; font-weight: 700; color: var(--color-dark);">{{ $product->name }}</h3>
                                     <p style="margin-top: 0.75rem; font-size: 0.875rem; line-height: 1.5; color: var(--color-gray-600); flex-grow: 1;">{{ $product->description }}</p>
                                     
-                                    <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--color-gray-100); display: flex; justify-content: space-between; align-items: center;">
+                                    <div class="card-footer-split">
                                         <div>
                                             <span style="font-size: 0.75rem; color: var(--color-gray-500); display: block;">Harga:</span>
                                             <span style="font-weight: 700; font-size: 1.1rem; color: var(--color-ocean);">Rp {{ is_numeric($product->price) ? number_format((float)$product->price, 0, ',', '.') : $product->price }}</span>

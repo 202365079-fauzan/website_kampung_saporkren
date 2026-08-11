@@ -4,7 +4,7 @@ $location = config('saporkren.siteMeta.location');
 
 <section class="hero" style="padding: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative;">
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;">
-        <video style="width: 100%; height: 100%; object-fit: cover; background: black;" autoplay loop muted playsinline preload="auto" poster="{{ asset('assets/bird/Wilson.jpeg') }}" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" src="{{ asset('assets/video kampung.mp4') }}"></video>
+        <video style="width: 100%; height: 100%; object-fit: cover; background: black;" autoplay loop muted playsinline preload="auto" poster="{{ asset('assets/bird/Wilson.jpeg') }}" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" src="{{ asset('assets/video-kampung.mp4') }}"></video>
         <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,20,32,0.28) 0%, rgba(6,20,32,0.38) 38%, rgba(6,20,32,0.72) 100%); z-index: 1;"></div>
     </div>
 
@@ -35,7 +35,7 @@ $location = config('saporkren.siteMeta.location');
             </div>
 
             <div style="margin-top: 3rem; display: inline-flex; align-items: center; gap: 0.6rem; border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.12); padding: 0.5rem 1.25rem; border-radius: 9999px; color: white; font-size: 0.875rem; font-weight: 500; backdrop-filter: blur(8px);">
-                <span style="height: 0.5rem; width: 0.5rem; border-radius: 9999px; background-color: var(--color-sand);" aria-hidden="true"></span>
+                <span class="bullet-dot" aria-hidden="true"></span>
                 {{ $location }}
             </div>
         </div>
