@@ -50,7 +50,7 @@
                                 onmouseover="this.style.background='rgba(255,255,255,0.45)'"
                                 onmouseout="this.style.background='rgba(255,255,255,0.25)'"
                                 title="Tutup Pratinjau (Esc)">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width: 1.5rem; height: 1.5rem;"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                            <svg xmlns="http://www.w3.org/  2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width: 1.5rem; height: 1.5rem;"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
                         </button>
 
                         <img :src="globalPreviewImg" :alt="globalPreviewTitle" style="max-width: 100%; max-height: 55vh; border-radius: 1rem; object-fit: contain; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.6); border: 2px solid rgba(255, 255, 255, 0.15);" />
