@@ -45,7 +45,7 @@
                         <p class="card-text" style="color: var(--color-gray-600); margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6;">Jelajahi spot-spot eksotis Raja Ampat bersama pemandu lokal berpengalaman yang mengenal rute alam dan cerita budaya setempat.</p>
                         <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.875rem; color: var(--color-gray-600); margin-bottom: 2rem;">
                             <li class="list-bullet-item"><span class="bullet-dot"></span><span>Pemandu Asli Kampung Saporkren</span></li>
-                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Paket Island Hopping & Snorkeling</span></li>
+                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Paket Wisata ke berbagai pulau</span></li>
                             <li class="list-bullet-item"><span class="bullet-dot"></span><span>Bahasa Indonesia & English</span></li>
                         </ul>
                         <div class="mt-auto">
@@ -62,7 +62,7 @@
                         <p class="card-text" style="color: var(--color-gray-600); margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6;">Saksikan langsung pesona burung Cenderawasih endemik Papua di dalam hutan konservasi Saporkren yang terjaga kelestariannya.</p>
                         <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.875rem; color: var(--color-gray-600); margin-bottom: 2rem;">
                             <li class="list-bullet-item"><span class="bullet-dot"></span><span>Spot Cenderawasih Merah & Botak</span></li>
-                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Paket Pengamatan Pagi & Full Day</span></li>
+                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Paket Pengamatan Bird Watching</span></li>
                             <li class="list-bullet-item"><span class="bullet-dot"></span><span>Etika Ekowisata Ramah Satwa</span></li>
                         </ul>
                         <div class="mt-auto">
@@ -76,10 +76,10 @@
                     <div class="card-content" style="flex: 1; display: flex; flex-direction: column; padding: 2rem;">
                         <div style="height: 0.4rem; width: 3.5rem; border-radius: 9999px; background-color: #f97316; margin-bottom: 1.25rem;" aria-hidden="true"></div>
                         <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-dark);">UMKM Lokal</h3>
-                        <p class="card-text" style="color: var(--color-gray-600); margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6;">Dukung ekonomi warga dengan membawa pulang hasil kerajinan rajut khas Papua serta produk kuliner olahan olahan laut berkualitas.</p>
+                        <p class="card-text" style="color: var(--color-gray-600); margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6;">Dukung ekonomi warga dengan membawa pulang hasil kerajinan rajut khas Saporkren serta produk olahan makanan yang berkualitas.</p>
                         <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.875rem; color: var(--color-gray-600); margin-bottom: 2rem;">
-                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Noken Rajut Alami Papua</span></li>
-                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Kuliner Olahan Hasil Laut Segar</span></li>
+                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Kapowen khas Saporkren</span></li>
+                            <li class="list-bullet-item"><span class="bullet-dot"></span><span>Olahan makanan</span></li>
                             <li class="list-bullet-item"><span class="bullet-dot"></span><span>Langsung dari Perajin & Warga</span></li>
                         </ul>
                         <div class="mt-auto">

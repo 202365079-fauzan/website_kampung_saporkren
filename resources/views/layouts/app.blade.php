@@ -7,6 +7,10 @@
 
         <title>{{ config('saporkren.seoDefaults.title', 'Kampung Saporkren') }}</title>
 
+        <!-- Favicon / Logo Kampung -->
+        <link rel="icon" type="image/png" href="{{ asset('assets/logo-kampung.png') }}">
+        <link rel="apple-touch-icon" href="{{ asset('assets/logo-kampung.png') }}">
+
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         

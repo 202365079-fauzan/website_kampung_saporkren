@@ -91,10 +91,10 @@ $meta = config('saporkren.siteMeta');
                             <div class="highlight-card">
                                 <div style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-ocean);">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 1.5rem; height: 1.5rem;"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
-                                    <p style="font-size: 1rem; font-weight: 700; color: var(--color-dark);">Pengetahuan Titik Terbaik (Spot Rahasia)</p>
+                                    <p style="font-size: 1rem; font-weight: 700; color: var(--color-dark);">Pengetahuan Titik Terbaik</p>
                                 </div>
                                 <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--color-gray-600); line-height: 1.6;">
-                                    Warga lokal mengetahui sudut-sudut terbaik yang sepi pengunjung untuk menikmati pemandangan laut, gugusan karst, serta spot habitat satwa liar.
+                                    Warga lokal mengetahui sudut-sudut terbaik yang sepi pengunjung untuk menikmati pemandangan laut, serta spot habitat satwa liar.
                                 </p>
                             </div>
 

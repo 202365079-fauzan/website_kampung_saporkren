@@ -82,7 +82,7 @@ $meta = config('saporkren.siteMeta');
                                 <div style="display: flex; align-items: start; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.5rem;">
                                     <h3 class="card-title" style="font-size: 1.35rem; font-weight: 700; color: var(--color-dark); margin: 0;">{{ $home->name }}</h3>
                                 </div>
-                                <p class="card-text" style="font-size: 0.875rem; color: var(--color-gray-600); margin-bottom: 1.25rem; line-height: 1.5;">{{ !empty($home->short_description) ? $home->short_description : '-' }}</p>
+                                <p class="card-text" style="font-size: 0.875rem; color: var(--color-gray-600); margin-bottom: 1.25rem; line-height: 1.5;">{{ !empty($home->short_description) ? $home->short_description : '' }}</p>
 
                                 <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.25rem; font-size: 0.85rem;">
                                     <div style="background: var(--color-gray-50); padding: 0.6rem 0.8rem; border-radius: 0.5rem; border: 1px solid var(--color-gray-200); display: flex; flex-direction: column; gap: 0.25rem;">
